@@ -7,11 +7,11 @@ void help_exit(void);
 void help_help(void);
 
 /**
- * help_all - Displays all possible builtin shellby commands with one command same as --help or man.
+ * help_all - Displays all possible builtin shelly commands with one command same as --help or man.
  */
 void help_all(void)
 {
-	char *msg = "Shellby\nThese shell commands are defined internally.\n";
+	char *msg = "shelly\nThese shell commands are defined internally.\n";
 
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "Type 'help' to see this list.\nType 'help name' to find ";
@@ -29,7 +29,7 @@ void help_all(void)
 }
 
 /**
- * help_alias - Displays information on the shellby builtin command 'alias'.
+ * help_alias - Displays information on the shelly builtin command 'alias'.
  */
 void help_alias(void)
 {
@@ -51,7 +51,7 @@ void help_alias(void)
 }
 
 /**
- * help_cd - Displays information on the shellby builtin command 'cd'.
+ * help_cd - Displays information on the shelly builtin command 'cd'.
  */
 void help_cd(void)
 {
@@ -71,7 +71,7 @@ void help_cd(void)
 }
 
 /**
- * help_exit - Displays information on the shellby builtin command 'exit'.
+ * help_exit - Displays information on the shelly builtin command 'exit'.
  */
 void help_exit(void)
 {
@@ -87,11 +87,11 @@ void help_exit(void)
 }
 
 /**
- * help_help - Displays information on the shellby builtin command 'help' an advanced man command.
+ * help_help - Displays information on the shelly builtin command 'help' an advanced man command.
  */
 void help_help(void)
 {
-	char *msg = "help: help\n\tSee all possible Shellby builtin commands.\n";
+	char *msg = "help: help\n\tSee all possible shelly builtin commands.\n";
 
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "\n      help [BUILTIN NAME]\n\tSee specific information on each ";
