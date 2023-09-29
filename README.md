@@ -2,11 +2,6 @@
 
 A simple UNIX command interpreter written as part of the low-level programming and algorithm track at ALX.
 
-### DEMO
-
-![2022-03-13-00-28-57](https://user-images.githubusercontent.com/35099243/158036309-f17bdff7-79f1-4d99-aa16-976af92408bc.gif)
-[shell](https://youtu.be/0HkSh3gMdYA)
-
 ## Description :speech_balloon:
 
 **shelly** is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
