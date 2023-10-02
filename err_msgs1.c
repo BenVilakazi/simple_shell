@@ -3,7 +3,6 @@
  * Auth: Ben Vilakazi
  *       Thapelo M
  */
-
 #include "shell.h"
 
 char *error_env(char **args);
@@ -13,9 +12,8 @@ char *error_2_cd(char **args);
 char *error_2_syntax(char **args);
 /**
  * error_env - Creates an error message for shelly_env errors.
- * @args: An array of arguments passed to the command.
- *
- * Return: The error string.
+ * @args: argv passed to the command.
+ * Return: The error str.
  */
 char *error_env(char **args)
 {
@@ -45,12 +43,10 @@ char *error_env(char **args)
 	free(hist_str);
 	return (error);
 }
-
 /**
  * error_1 - Creates an error message for shelly_alias errors.
- * @args: An array of arguments passed to the command.
- *
- * Return: The error string.
+ * @args: argv passed to the command.
+ * Return: The error str.
  */
 char *error_1(char **args)
 {
@@ -68,12 +64,10 @@ char *error_1(char **args)
 
 	return (error);
 }
-
 /**
  * error_2_exit - Creates an error message for shelly_exit errors.
- * @args: An array of arguments passed to the command.
- *
- * Return: The error string.
+ * @args: argv passed to the command.
+ * Return: The error str.
  */
 char *error_2_exit(char **args)
 {
@@ -102,11 +96,9 @@ char *error_2_exit(char **args)
 	free(hist_str);
 	return (error);
 }
-
 /**
  * error_2_cd - Creates an error message for shelly_cd errors.
- * @args: An array of arguments passed to the command.
- *
+ * @args: argv passed to the command.
  * Return: The error string.
  */
 char *error_2_cd(char **args)
@@ -141,12 +133,10 @@ char *error_2_cd(char **args)
 	free(hist_str);
 	return (error);
 }
-
 /**
  * error_2_syntax - Creates an error message for syntax errors.
- * @args: An array of arguments passed to the command.
- *
- * Return: The error string.
+ * @args: argv passed to the command.
+ * Return: The error str.
  */
 char *error_2_syntax(char **args)
 {
