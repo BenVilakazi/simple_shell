@@ -1,7 +1,7 @@
 /*
  * File: errors.c
  * Auth: Ben Vilakazi
- *       Rhapelo M
+ *       Thapelo M
  */
 
 #include "shell.h"
@@ -9,11 +9,10 @@
 int num_len(int num);
 char *_itoa(int num);
 int create_error(char **args, int err);
-
 /**
- * num_len - Counts the digit length of a number.
- * @num: The number to measure.
- * Return: The digit length.
+ * num_len - Counts the digit len of a num.
+ * @num: The num to measure.
+ * Return: The digit len.
  */
 int num_len(int num)
 {
@@ -37,11 +36,10 @@ int num_len(int num)
 
 	return (len);
 }
-
 /**
- * _itoa - Converts an integer to a string to enable manipulation.
- * @num: The integer.
- * Return: The converted string.
+ * _itoa - Converts an int to a str to enable manipulation.
+ * @num: int.
+ * Return: The converted str.
  */
 char *_itoa(int num)
 {
@@ -74,12 +72,11 @@ char *_itoa(int num)
 
 	return (buffer);
 }
-
 /**
  * create_error - Writes a custom error message to stderr that conforms to shell standards.
- * @args: An array of arguments passed to the function.
- * @err: The error value.
- * Return: The error value.
+ * @args: argv passed to the func.
+ * @err: The error val.
+ * Return: The error val.
  */
 int create_error(char **args, int err)
 {
