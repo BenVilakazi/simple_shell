@@ -9,16 +9,13 @@
 int shelly_env(char **args, char __attribute__((__unused__)) **front);
 int shelly_setenv(char **args, char __attribute__((__unused__)) **front);
 int shelly_unsetenv(char **args, char __attribute__((__unused__)) **front);
-
 /**
  * shelly_env - Prints the current environment.
- * @args: An array of arguments passed to the shell.
- * @front: A double pointer to the beginning of args.
- *
+ * @args: argv passed to the shell.
+ * @front: A double ptr to the start of args.
  * Return: If an error occurs - -1 status is thrown.
- *	   Otherwise - 0 if no error occurs.
- *
- * Description: Prints one variable per line in the
+ *	   else - 0 if no error occurs.
+ * desc: prints one var per line in the
  *              format 'variable'='value'.
  */
 int shelly_env(char **args, char __attribute__((__unused__)) **front)
@@ -38,16 +35,14 @@ int shelly_env(char **args, char __attribute__((__unused__)) **front)
 	(void)args;
 	return (0);
 }
-
 /**
  * shelly_setenv - Changes or adds an environmental variable to the PATH of the shell Command.
- * @args: An array of arguments passed to the shell.
- * @front: A double pointer to the beginning of args.
- * Description: args[1] is the name of the new or existing PATH variable.
+ * @args: argv passed to the shell.
+ * @front: A double ptr to the start of args.
+ * desc: args[1] is the name of the new or existing PATH variable.
  *              args[2] is the value to set the new or changed variable to.
- *
  * Return: If an error occurs - -1.
- *         Otherwise - 0.
+ *         else - 0.
  */
 int shelly_setenv(char **args, char __attribute__((__unused__)) **front)
 {
@@ -92,15 +87,13 @@ int shelly_setenv(char **args, char __attribute__((__unused__)) **front)
 
 	return (0);
 }
-
 /**
- * shelly_unsetenv - Deletes an environmental variable from the PATH.
- * @args: An array of arguments passed to the shell.
- * @front: A double pointer to the beginning of args.
- * Description: args[1] is the PATH variable to remove.
- *
+ * shelly_unsetenv - Deletes an env var from the PATH.
+ * @args: argv passed to the shell.
+ * @front: A double ptr to the start of args.
+ * desc: args[1] is the PATH var to remove.
  * Return: If an error occurs - -1.
- *         Otherwise - 0.
+ *         else - 0.
  */
 int shelly_unsetenv(char **args, char __attribute__((__unused__)) **front)
 {
