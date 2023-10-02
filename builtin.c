@@ -3,19 +3,16 @@
  * Auth: Ben Vilakazi
  *       Thapelo M
  */
-
 #include "shell.h"
 int (*get_builtin(char *command))(char **args, char **front);
 int shelly_exit(char **args, char **front);
 int shelly_cd(char **args, char __attribute__((__unused__)) **front);
 int shelly_help(char **args, char __attribute__((__unused__)) **front);
-
 /**
  * get_builtin - Matches a command with a corresponding
  *               shelly builtin function.
- * @command: The command to match.
- *
- * Return: A function pointer to the corresponding builtin.
+ * @command: the command to match.
+ * Return: A funct ptr to the corresponding builtin.
  */
 int (*get_builtin(char *command))(char **args, char **front)
 {
@@ -38,18 +35,15 @@ int (*get_builtin(char *command))(char **args, char **front)
 	}
 	return (funcs[i].f);
 }
-
 /**
  * shelly_exit - Causes normal process termination
  *                for the shelly shell.
- * @args: An array of arguments containing the exit value.
- * @front: A double pointer to the beginning of args.
- *
- * Return: If there are no arguments - -3.
+ * @args: argv containing the exit value.
+ * @front: A double ptr to start the args.
+ * Return: If != args - -3.
  *         If the given exit value is invalid - 2.
  *         O/w - exits with the given status value.
- *
- * Description: Upon returning -3, the program exits back in the main function.
+ * description: Upon returning -3, the program exits back in the main funct.
  */
 int shelly_exit(char **args, char **front)
 {
@@ -83,15 +77,13 @@ int shelly_exit(char **args, char **front)
 	free_alias_list(aliases);
 	exit(num);
 }
-
 /**
- * shelly_cd - Changes the current directory of the shelly process.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
- *
- * Return: If the given string is not a directory - 2.
+ * shelly_cd - Changes the current dir of the shelly process.
+ * @args: argv.
+ * @front: A double ptr to the beginning of args.
+ * Return: If the given str is not a dir - 2.
  *         If an error occurs - -1.
- *         Otherwise - 0.
+ *         eise - 0.
  */
 int shelly_cd(char **args, char __attribute__((__unused__)) **front)
 {
@@ -164,14 +156,12 @@ int shelly_cd(char **args, char __attribute__((__unused__)) **front)
 	free(dir_info);
 	return (0);
 }
-
 /**
  * shelly_help - Displays information about shelly builtin commands.
- * @args: An array of arguments.
- * @front: A pointer to the beginning of args.
- *
+ * @args: argv.
+ * @front: A ptr to the start of args.
  * Return: If an error occurs - -1.
- *         Otherwise - 0.
+ *         eise - 0.
  */
 int shelly_help(char **args, char __attribute__((__unused__)) **front)
 {
