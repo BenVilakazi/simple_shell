@@ -3,17 +3,15 @@
  * Auth: Ben Vilakazi
  *       Thapelo M
  */
-
 #include "shell.h"
 
 void handle_line(char **line, ssize_t read);
 ssize_t get_new_len(char *line);
 void logical_ops(char *line, ssize_t *new_len);
-
 /**
- * handle_line - Partitions a line read from standard input as needed or described.
- * @line: A pointer to a line read from standard input.
- * @read: The length of line.
+ * handle_line - partitions a line read from standard input as needed or described.
+ * @line: A ptr to a line read from standard input.
+ * @read: The len of line.
  * Description: Spaces are inserted to separate ";", "||", and "&&".
  *              Replaces "#" with '\0'.
  */
@@ -99,15 +97,13 @@ void handle_line(char **line, ssize_t read)
 	free(*line);
 	*line = new_line;
 }
-
 /**
- * get_new_len - Gets the new length of a line partitioned
+ * get_new_len - Gets the new len of a line partitioned
  *               by ";", "||", "&&&", or "#".
  * @line: The line to check.
- * Return: The new length of the line.
+ * Return: The new len of the line.
  * Description: Cuts short lines containing '#' comments with '\0'.
  */
-
 ssize_t get_new_len(char *line)
 {
 	size_t i;
@@ -161,8 +157,8 @@ ssize_t get_new_len(char *line)
 }
 /**
  * logical_ops - Checks a line for logical operators "||" or "&&".
- * @line: A pointer to the character to check in the line.
- * @new_len: Pointer to new_len in get_new_len function.
+ * @line: A ptr to the char to check in the line.
+ * @new_len: ptr to new_len in get_new_len func.
  */
 void logical_ops(char *line, ssize_t *new_len)
 {
