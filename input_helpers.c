@@ -15,9 +15,9 @@ int check_args(char **args);
 /**
  * get_args - Gets a command from standard input.
  * @line: A buffer to store the command to improve perfomance.
- * @exe_ret: The return value of the last executed command.
- * Return: If an error occurs - NULL.
- *         Otherwise - a pointer to the stored command.
+ * @exe_ret: The return val of the last executed command.
+ * Return: If an err occurs - NULL.
+ *         else - a ptr to the stored command.
  */
 char *get_args(char *line, int *exe_ret)
 {
@@ -45,11 +45,10 @@ char *get_args(char *line, int *exe_ret)
 
 	return (line);
 }
-
 /**
- * call_args - Partitions operators from commands and calls them.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
+ * call_args - partitions operators from commands and calls them.
+ * @args: args vector.
+ * @front: A double ptr to the start of args.
  * @exe_ret: The return value of the parent process' last executed command.
  * Return: The return value of the last executed command.
  */
@@ -102,11 +101,10 @@ int call_args(char **args, char **front, int *exe_ret)
 	ret = run_args(args, front, exe_ret);
 	return (ret);
 }
-
 /**
  * run_args - Calls the execution of a command.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
+ * @args: args vector.
+ * @front: A double ptr to the start of args.
  * @exe_ret: The return value of the parent process' last executed command.
  * Return: The return value of the last executed command on the shell history.
  */
@@ -136,7 +134,6 @@ int run_args(char **args, char **front, int *exe_ret)
 
 	return (ret);
 }
-
 /**
  * handle_args - Gets, calls, and runs the execution of a command.
  * @exe_ret: The return value of the parent process' last executed command.
@@ -182,12 +179,11 @@ int handle_args(int *exe_ret)
 	free(front);
 	return (ret);
 }
-
 /**
  * check_args - Checks if there are any leading ';', ';;', '&&', or '||'.
- * @args: 2D pointer to tokenized commands and arguments.
- * Return: If a ';', '&&', or '||' is placed at an invalid position - 2 as error status.
- *	   Otherwise - 0 as error status.
+ * @args: 2D ptr to tokenized commands and args.
+ * Return: If a ';', '&&', or '||' is placed at an invalid position - 2 as err status.
+ *	   else - 0 as err status.
  */
 int check_args(char **args)
 {
