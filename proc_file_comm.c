@@ -1,3 +1,8 @@
+/**
+ * File: proc_file_comm.c
+ * Auth: Ben Vilakazi
+ *       Thapelo Maropela
+ */
 #include "shell.h"
 
 int cant_open(char *file_path);

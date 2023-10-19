@@ -1,7 +1,7 @@
-/*
+/**
  * File: builtin.c
  * Auth: Ben Vilakazi
- *       Thapelo M
+ *       Thapelo Maropela
  */
 #include "shell.h"
 int (*get_builtin(char *command))(char **args, char **front);

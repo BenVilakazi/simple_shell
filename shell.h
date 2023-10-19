@@ -1,10 +1,10 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-/*
+/**
  * File: shell.h
  * Auth: Ben Vilakazi.
- *       Thapelo M.
+ *       Thapelo Maropela.
  */
 
 #include <fcntl.h>

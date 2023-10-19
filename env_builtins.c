@@ -1,9 +1,8 @@
-/*
+/**
  * File: env_builtins.c
  * Auth: Ben Vilakazi
- *       Thapelo M
+ *       Thapelo Maropela
  */
-
 #include "shell.h"
 
 int shelly_env(char **args, char __attribute__((__unused__)) **front);

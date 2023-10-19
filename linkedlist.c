@@ -1,7 +1,7 @@
-/*
+/**
  * File: linkedlist.c
  * Auth: Ben Vilakazi
- *       Thapelo M
+ *       Thapelo Maropela
  */
 #include "shell.h"
 

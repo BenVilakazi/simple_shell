@@ -1,9 +1,8 @@
-/*
+/**
  * File: helper.c
  * Auth: Ben Vilakazi
- *       Thapelo M
+ *       Thapelo Maropela
  */
-
 #include "shell.h"
 
 void free_args(char **args, char **front);

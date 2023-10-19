@@ -284,7 +284,7 @@ $
 ## Authors :black_nib:
 
 * Ben Vilakazi <[Ben Vilakazi](https://github.com/BenVilakazi)>
-* Thapelo M <[Thapelo M](https://github.com/)>
+* Thapelo M <[Thapelo Maropela](https://github.com/tmaropela)>
 
 ## License :lock:
 

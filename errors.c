@@ -1,9 +1,8 @@
-/*
+/**
  * File: errors.c
  * Auth: Ben Vilakazi
- *       Thapelo M
+ *       Thapelo Maropela
  */
-
 #include "shell.h"
 
 int num_len(int num);

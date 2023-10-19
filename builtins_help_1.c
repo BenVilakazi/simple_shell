@@ -1,3 +1,8 @@
+/**
+ * File: builtin_help_1.c
+ * Auth: Ben Vilakazi
+ *       Thapelo Maropela
+ */
 #include "shell.h"
 
 void help_all(void);
